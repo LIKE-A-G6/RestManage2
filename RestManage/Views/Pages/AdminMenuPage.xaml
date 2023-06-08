@@ -1,0 +1,28 @@
+﻿<Page x:Class="RestManage.Views.Pages.AdminMenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RestManage.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="AdminMenuPage">
+    <Grid Background="PowderBlue" Width="Auto" Height="Auto">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel  Orientation="Horizontal" Width="Auto" HorizontalAlignment="Left" Grid.ColumnSpan="2">
+            <StackPanel Orientation="Vertical" Width="316">
+                <Button Content="Сотрудники" Margin="5" Height="80" Click="EmployeeButtonClick"/>
+                <Button Content="Меню" Margin="5" Height="80"/>
+                <Button Content="Роли" Margin="5" Height="80" Click="Button_Click"/>
+                <Button Content="Заказы" Margin="5" Height="80"/>
+                <Button Content="Категории" Margin="5" Height="80"/>
+                <Button Content="Содержимое заказа" Margin="5" Height="80"/>
+                <Button Content="Выход" Margin="5" Height="80" Click="ExitBtn_Click_1"/>
+            </StackPanel>
+        </StackPanel>
+        <Frame Background="LightGray" Grid.ColumnSpan="2" Width="1579" HorizontalAlignment="Left" x:Name="PageFrame"  Margin="331,10,0,10"/>
+    </Grid>
+</Page>

@@ -1,0 +1,18 @@
+﻿<Window x:Class="RestManage.Views.Windows.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RestManage"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Title="Авторизация" Height="393" Width="391">
+    <Grid>
+        <PasswordBox x:Name="PasswordTxt" HorizontalAlignment="Center" Margin="0,205,0,0" VerticalAlignment="Top" Width="236" Height="25"/>
+        <TextBox x:Name="LoginTxt" HorizontalAlignment="Center" Margin="0,162,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="236" Height="24"/>
+        <Label Content="Авторизация" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,92,0,0" VerticalAlignment="Top" Height="36" Width="161"/>
+        <Button x:Name="LoginBtn" Content="Войти" HorizontalAlignment="Center" Margin="0,249,0,0" VerticalAlignment="Top" Height="28" Width="73" Click="LoginBtn_Click"/>
+        <Label x:Name="RegistrationBtn" Content="Еще нет аккаута?" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,284,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.487,-0.153" Height="36" Width="203" Foreground="#FF909090" MouseDown="Registration_window_open"/>
+    </Grid>
+</Window>

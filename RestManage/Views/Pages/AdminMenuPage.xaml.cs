@@ -1,0 +1,54 @@
+﻿using RestManage.Views.Windows;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace RestManage.Views.Pages
+{
+    /// <summary>
+    /// Логика взаимодействия для AdminMenuPage.xaml
+    /// </summary>
+    public partial class AdminMenuPage : Page
+    {
+        public AdminMenuPage()
+        {
+            InitializeComponent();
+        }
+
+        private void EmployeeButtonClick(object sender, RoutedEventArgs e)
+        {
+            PageFrame.Content = new EmployeePage();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            PageFrame.Content = new RolesPage();
+        }
+
+        private void ExitBtn_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = Window.GetWindow(this) as MainWindow;
+            // Создание и открытие нового окна LoginWindow
+            LoginWindow loginWindow = new LoginWindow();
+
+            // Проверка, что родительское окно не равно null
+            if (mainWindow != null)
+            {
+                // Закрытие родительского окна MainWindow
+                mainWindow.Close();
+                loginWindow.Show();
+            }
+        }
+    }
+}

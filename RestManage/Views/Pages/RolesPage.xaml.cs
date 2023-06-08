@@ -1,0 +1,59 @@
+﻿using RestManage.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace RestManage.Views.Pages
+{
+    /// <summary>
+    /// Логика взаимодействия для RolesPage.xaml
+    /// </summary>
+    public partial class RolesPage : Page
+    {
+        public RolesPage()
+        {
+            InitializeComponent();
+        }
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            RolesGrid.ItemsSource = AppData.db.Roles.ToList();
+        }
+
+        private void RemoveBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Вы действительно хотите удалить эту запись?", "Уведомление", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                var CurrentRole = RolesGrid.SelectedItem as Roles;
+                AppData.db.Roles.Remove(CurrentRole);
+                AppData.db.SaveChanges();
+
+                RolesGrid.ItemsSource = AppData.db.Roles.ToList();
+                MessageBox.Show("Запись удалена!");
+            }
+        }
+
+        private void EditBtn_Click(object sender, RoutedEventArgs e)
+        {
+            // Обновление данных
+            RolesGrid.ItemsSource = AppData.db.Roles.ToList();
+            // Сохранение изменений в базе данных
+            AppData.db.SaveChanges();
+        }
+
+        private void AddBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new AddRolePage());
+        }
+    }
+}

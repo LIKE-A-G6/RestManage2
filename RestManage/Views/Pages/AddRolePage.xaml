@@ -1,0 +1,20 @@
+﻿<Page x:Class="RestManage.Views.Pages.AddRolePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RestManage.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1060" d:DesignWidth="1579"
+      Title="AddRolePage">
+
+    <Grid Background="White">
+        <Grid Background="White">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label Content="Новая роль"/>
+                <TextBox x:Name="RoleTxt" Height="18" Text=""/>
+                <Button Content="Сохранить" Click="SaveBtn_Click" Margin="0 15 0 0" Width="150" Height="30"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

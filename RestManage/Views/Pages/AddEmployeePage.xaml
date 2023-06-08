@@ -1,0 +1,28 @@
+﻿<Page x:Class="RestManage.Views.Pages.AddEmployeePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RestManage.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1060" d:DesignWidth="1579"
+      Title="AddEmployeePage">
+
+    <Grid Background="White">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Content="Фамилия"/>
+            <TextBox x:Name="LastNameTxt" Height="18" Text=""/>
+            <Label Content="Имя"/>
+            <TextBox x:Name="FirstNameTxt" Height="18"/>
+            <Label Content="Отчество"/>
+            <TextBox x:Name="PatronymicTxt" Height="18"/>
+            <Label Content="Логин"/>
+            <TextBox x:Name="LoginTxt" Height="18"/>
+            <Label Content="Пароль"/>
+            <PasswordBox x:Name="PasswordTxt" Height="18"/>
+            <Label Content="Роль"/>
+            <ComboBox x:Name="RoleCmb" Height="18" Width="299" DisplayMemberPath="Role"/>
+            <Button Content="Сохранить" Click="SaveBtn_Click" Margin="0 15 0 0" Width="150" Height="30"/>
+        </StackPanel>
+    </Grid>
+</Page>
